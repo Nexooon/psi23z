@@ -1,0 +1,57 @@
+services:
+  gateway:
+    build: gateway
+    container_name: z45_projekt_gateway
+    tty: true
+    command: -a z45_projekt_gateway -p 8080
+    networks:
+      - z45_network
+
+
+  recorder:
+    build: recorder
+    container_name: z45_projekt_recorder
+    tty: true
+    depends_on:
+      - gateway
+    command: -a z45_projekt_gateway -p 8080
+    networks:
+      - z45_network
+
+
+  sensory_device1:
+    build: sensory_device
+    container_name: z45_projekt_sensory_device1
+    tty: true
+    depends_on:
+      - gateway
+    command: -a z45_projekt_gateway -p 8080
+    networks:
+      - z45_network
+
+
+  sensory_device2:
+    build: sensory_device
+    container_name: z45_projekt_sensory_device2
+    tty: true
+    depends_on:
+      - gateway
+    command: -a z45_projekt_gateway -p 8080
+    networks:
+      - z45_network
+
+  sensory_device3:
+    build: sensory_device
+    container_name: z45_projekt_sensory_device3
+    tty: true
+    depends_on:
+      - gateway
+    command: -a z45_projekt_gateway -p 8080 --id 100
+    networks:
+      - z45_network
+
+
+networks:
+  z45_network:
+    external: true
+    driver: bridge

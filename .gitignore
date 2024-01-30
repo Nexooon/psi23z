@@ -1,0 +1,5 @@
+__pycache__/
+/gateway/*.sh
+/recorder/*.sh
+/sensory_device/*.sh
+
