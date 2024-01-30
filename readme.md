@@ -1,4 +1,8 @@
-<h1>Po uruchomieniu w takiej kolejnosci dane powinny sie przeslac</h1>
+<h1>Network programming project</h1>
+<br>
+<h2>CBOR to JSON converter using gateway</h2>
+<br>
+<h1>Simple run</h1>
 
     ```bash
     python3 gateway.py
@@ -6,11 +10,11 @@
     python3 sensory_device.py
 
 
-<h1>na bigubu</h1>
+<h1>using docker</h1>
 
     ```bash
     #podstawowa konfiguracje mozemy przetestowac uruchmiajac kolejno, brame, rejesetrator, urzadznie ze skryptow build i run
-    #wygodniej to zrobic docker compose jednak
+    #wygodniej to zrobic docker compose
 
     #za pomoca docker compose
     #1. podstawowa konfiguracja
